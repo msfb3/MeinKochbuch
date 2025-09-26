@@ -48,16 +48,6 @@
 			path = "Mein Kochbuch";
 			sourceTree = "<group>";
 		};
-		00900C262E871E520021A745 /* Mein KochbuchTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Mein KochbuchTests";
-			sourceTree = "<group>";
-		};
-		00900C302E871E520021A745 /* Mein KochbuchUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Mein KochbuchUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				00900C142E871E500021A745 /* Mein Kochbuch */,
-				00900C262E871E520021A745 /* Mein KochbuchTests */,
-				00900C302E871E520021A745 /* Mein KochbuchUITests */,
 				00900C132E871E500021A745 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +131,6 @@
 			dependencies = (
 				00900C252E871E520021A745 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				00900C262E871E520021A745 /* Mein KochbuchTests */,
-			);
 			name = "Mein KochbuchTests";
 			packageProductDependencies = (
 			);
@@ -165,9 +150,6 @@
 			);
 			dependencies = (
 				00900C2F2E871E520021A745 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				00900C302E871E520021A745 /* Mein KochbuchUITests */,
 			);
 			name = "Mein KochbuchUITests";
 			packageProductDependencies = (
