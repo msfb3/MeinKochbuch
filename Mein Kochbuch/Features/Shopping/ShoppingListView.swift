@@ -1,7 +1,14 @@
-//
-//  ShoppingListView.swift
-//  Mein Kochbuch
-//
-//  Created by Fabian Breitling on 26.09.25.
-//
+import SwiftUI
 
+struct ShoppingListView: View {
+    var body: some View {
+        NavigationStack {
+            ContentUnavailableView("Noch keine Einkäufe", systemImage: "cart", description: Text("Füge Zutaten aus Rezepten hinzu."))
+                .navigationTitle("Einkäufe")
+        }
+    }
+}
+
+#Preview {
+    ShoppingListView()
+}

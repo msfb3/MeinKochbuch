@@ -17,6 +17,6 @@ struct MeinKochbuchApp: App {
             RootView()
                 .environment(appState)
         }
-        .modelContainer(for: [Recipe.self, Ingredient.self, RepiceStep.self, ShoppingItem.self])
+        .modelContainer(for: [Recipe.self, Ingredient.self, RecipeStep.self])
     }
 }

@@ -17,8 +17,8 @@ final class Recipe {
     var totalMinutes: Int
     var tags: [String]
     var imageData: Data?
-    @Relationship(.cascade) var ingredients: [Ingredient]
-    @Relationship(.cascade) var steps: [RecipeStep]
+    @Relationship(deleteRule: .cascade) var ingredients: [Ingredient]
+    @Relationship(deleteRule: .cascade) var steps: [RecipeStep]
     
     init(
         id: UUID = UUID(),

@@ -10,17 +10,17 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         TabView {
-            RepiceListView()
+            RecipeListView()
                 .tabItem {
-                    {Label("Rezepte", systemImage: "book.closed") }
+                    Label("Rezepte", systemImage: "book.closed")
                 }
             ShoppingListView()
                 .tabItem {
-                    {Label("Einkäufe", systemImage: "cart") }
+                    Label("Einkäufe", systemImage: "cart")
                 }
             SettingsView()
                 .tabItem {
-                    {Label("Einstellungen", systemImage: "gearshape") }
+                    Label("Einstellungen", systemImage: "gearshape")
                 }
         }
     }

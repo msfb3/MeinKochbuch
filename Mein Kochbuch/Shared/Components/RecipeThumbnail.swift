@@ -20,7 +20,7 @@ struct RecipeThumbnail: View {
         }
         .frame(width: 64, height: 64)
         .background(.thinMaterial)
-        clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
             .accessibilityLabel("Rezeptbild")
     }
 }
