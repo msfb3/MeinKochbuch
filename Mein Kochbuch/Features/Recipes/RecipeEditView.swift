@@ -1,9 +1,20 @@
 import SwiftUI
+import SwiftData
 
 struct RecipeEditView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
     @State private var title: String = ""
-    @State private var servings: Int = 2
+    @State private var servings: Int = 1
+
+    private func save() {
+        let trimmed = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        let recipe = Recipe(title: trimmed, servings: servings)
+        modelContext.insert(recipe)
+        try? modelContext.save()
+        dismiss()
+    }
 
     var body: some View {
         Form {
@@ -18,7 +29,8 @@ struct RecipeEditView: View {
                 Button("Abbrechen") { dismiss() }
             }
             ToolbarItem(placement: .confirmationAction) {
-                Button("Speichern") { dismiss() }
+                Button("Speichern") { save() }
+                    .disabled(title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             }
         }
     }
