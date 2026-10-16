@@ -12,11 +12,17 @@ import Foundation
 final class ShoppingItem {
     @Attribute(.unique) var id: UUID
     var name: String
-    var amount: Double
+    var amount: Double?
     var unit: Ingredient.Unit?
     var checked: Bool
     
-    init(id: UUID, name: String, amount: Double, unit: Ingredient.Unit? = nil, checked: Bool) {
+    init(
+        id: UUID = UUID(),
+        name: String,
+        amount: Double? = nil,
+        unit: Ingredient.Unit? = nil,
+        checked: Bool = false
+    ) {
         self.id = id
         self.name = name
         self.amount = amount

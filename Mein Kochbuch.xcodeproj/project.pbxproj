@@ -27,6 +27,7 @@
 		00900C122E871E500021A745 /* Mein Kochbuch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mein Kochbuch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00900C232E871E520021A745 /* Mein KochbuchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mein KochbuchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00900C2D2E871E520021A745 /* Mein KochbuchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mein KochbuchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00C4DF5530829DCA008024D4 /* RecipeModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +47,11 @@
 				00900C352E871E520021A745 /* Exceptions for "Mein Kochbuch" folder in "Mein Kochbuch" target */,
 			);
 			path = "Mein Kochbuch";
+			sourceTree = "<group>";
+		};
+		00C4DF5630829DCA008024D4 /* RecipeModelTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RecipeModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -72,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00C4DF5230829DCA008024D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				00900C142E871E500021A745 /* Mein Kochbuch */,
+				00C4DF5630829DCA008024D4 /* RecipeModelTests */,
 				00900C132E871E500021A745 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +103,7 @@
 				00900C122E871E500021A745 /* Mein Kochbuch.app */,
 				00900C232E871E520021A745 /* Mein KochbuchTests.xctest */,
 				00900C2D2E871E520021A745 /* Mein KochbuchUITests.xctest */,
+				00C4DF5530829DCA008024D4 /* RecipeModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +173,28 @@
 			productReference = 00900C2D2E871E520021A745 /* Mein KochbuchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		00C4DF5430829DCA008024D4 /* RecipeModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00C4DF5930829DCA008024D4 /* Build configuration list for PBXNativeTarget "RecipeModelTests" */;
+			buildPhases = (
+				00C4DF5130829DCA008024D4 /* Sources */,
+				00C4DF5230829DCA008024D4 /* Frameworks */,
+				00C4DF5330829DCA008024D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				00C4DF5630829DCA008024D4 /* RecipeModelTests */,
+			);
+			name = RecipeModelTests;
+			packageProductDependencies = (
+			);
+			productName = RecipeModelTests;
+			productReference = 00C4DF5530829DCA008024D4 /* RecipeModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,8 +202,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2600;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					00900C112E871E500021A745 = {
 						CreatedOnToolsVersion = 26.0.1;
@@ -178,6 +215,9 @@
 					00900C2C2E871E520021A745 = {
 						CreatedOnToolsVersion = 26.0.1;
 						TestTargetID = 00900C112E871E500021A745;
+					};
+					00C4DF5430829DCA008024D4 = {
+						CreatedOnToolsVersion = 27.0;
 					};
 				};
 			};
@@ -198,6 +238,7 @@
 				00900C112E871E500021A745 /* Mein Kochbuch */,
 				00900C222E871E520021A745 /* Mein KochbuchTests */,
 				00900C2C2E871E520021A745 /* Mein KochbuchUITests */,
+				00C4DF5430829DCA008024D4 /* RecipeModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +265,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00C4DF5330829DCA008024D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -242,6 +290,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		00900C292E871E520021A745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00C4DF5130829DCA008024D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,6 +446,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -448,6 +504,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -537,6 +594,58 @@
 			};
 			name = Release;
 		};
+		00C4DF5A30829DCA008024D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(BUILT_PRODUCTS_DIR)/Mein\\ Kochbuch.app/Mein\\ Kochbuch.debug.dylib";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RecipeModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mein Kochbuch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mein Kochbuch";
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		00C4DF5B30829DCA008024D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(BUILT_PRODUCTS_DIR)/Mein\\ Kochbuch.app/Mein\\ Kochbuch.debug.dylib";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RecipeModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mein Kochbuch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mein Kochbuch";
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +681,15 @@
 			buildConfigurations = (
 				00900C3F2E871E520021A745 /* Debug */,
 				00900C402E871E520021A745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00C4DF5930829DCA008024D4 /* Build configuration list for PBXNativeTarget "RecipeModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00C4DF5A30829DCA008024D4 /* Debug */,
+				00C4DF5B30829DCA008024D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

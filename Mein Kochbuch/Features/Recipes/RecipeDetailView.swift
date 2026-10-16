@@ -16,6 +16,9 @@ struct RecipeDetailView: View {
 
     @State private var targetServings: Int
     @State private var showDeleteAlert = false
+    @State private var showShoppingConfirmation = false
+    @State private var showShoppingError = false
+    @State private var shoppingErrorMessage = ""
 
     init(recipe: Recipe) {
         self.recipe = recipe
@@ -45,6 +48,24 @@ struct RecipeDetailView: View {
 
     private var sortedSteps: [RecipeStep] {
         recipe.steps.sorted { $0.index < $1.index }
+    }
+
+    private func addIngredientsToShoppingList() {
+        do {
+            let entries = sortedIngredients.map { ingredient in
+                ShoppingListEntry(
+                    name: ingredient.name,
+                    amount: ingredient.amount * factor,
+                    unit: ingredient.unit
+                )
+            }
+            try ShoppingListManager.add(entries, to: modelContext)
+            showShoppingConfirmation = true
+        } catch {
+            modelContext.rollback()
+            shoppingErrorMessage = error.localizedDescription
+            showShoppingError = true
+        }
     }
 
     var body: some View {
@@ -121,6 +142,17 @@ struct RecipeDetailView: View {
                                 Spacer()
                             }
                         }
+
+                        Button {
+                            addIngredientsToShoppingList()
+                        } label: {
+                            Label(
+                                "Zur Einkaufsliste hinzufügen",
+                                systemImage: "cart.badge.plus"
+                            )
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .padding(.top, 8)
                     }
                 }
 
@@ -154,7 +186,14 @@ struct RecipeDetailView: View {
         .navigationTitle("Rezept")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                NavigationLink {
+                    RecipeEditView(recipe: recipe)
+                } label: {
+                    Image(systemName: "pencil")
+                }
+                .accessibilityLabel("Rezept bearbeiten")
+
                 Button(role: .destructive) {
                     showDeleteAlert = true
                 } label: {
@@ -172,6 +211,24 @@ struct RecipeDetailView: View {
             Button("Abbrechen", role: .cancel) { }
         } message: {
             Text("Dies kann nicht rückgängig gemacht werden.")
+        }
+        .alert(
+            "Zur Einkaufsliste hinzugefügt",
+            isPresented: $showShoppingConfirmation
+        ) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(
+                "Die Zutaten für \(targetServings) Portionen wurden übernommen."
+            )
+        }
+        .alert(
+            "Einkaufsliste konnte nicht gespeichert werden",
+            isPresented: $showShoppingError
+        ) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(shoppingErrorMessage)
         }
     }
 }
